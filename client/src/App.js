@@ -89,6 +89,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className="banner text-4xl font-bold text-primary">
+        The perfect outfit for summer
+      </div>
       <DropdownCategory
         handleCategorySelect={handleCategorySelect}
         categories={categories}
