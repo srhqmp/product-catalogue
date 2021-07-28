@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './App.css'
+import './styles/output.css'
 import ReactPaginate from 'react-paginate'
 import Products from './components/products/Products'
 import productService from './services/product'
@@ -90,7 +90,7 @@ function App() {
   return (
     <div className="App">
       <div className="banner">
-        <h2 className="text-3xl md:text-4xl font-bold font-banner text-primary">
+        <h2 className="banner-text">
           The perfect outfit for summer
         </h2>
       </div>

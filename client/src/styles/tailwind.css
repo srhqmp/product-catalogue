@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.banner-text {
+  @apply text-3xl md:text-4xl font-bold font-banner text-primary
+}
+
+.card {
+  @apply bg-white rounded-md overflow-hidden shadow mt-8 w-card h-card relative;
+}
+
+.badge {
+  @apply bg-primary text-white text-xs uppercase py-1 px-3 absolute top-0 ml-5 mt-7;
+}
+
+.product-image {
+  @apply w-full h-3/4 object-cover;
+}
+
+.details {
+  @apply m-1 p-7
+}
+
+
+
+

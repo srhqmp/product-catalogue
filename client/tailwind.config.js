@@ -18,7 +18,7 @@ module.exports = {
       },
       height: {
         card: '428px',
-        img: '75%'
+        img: '75%',
       },
     },
   },
