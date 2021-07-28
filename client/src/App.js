@@ -4,6 +4,7 @@ import ReactPaginate from 'react-paginate'
 import Products from './components/products/Products'
 import productService from './services/product'
 import Search from './components/Search'
+import DropdownPrice from './components/DropdownPrice'
 
 function App() {
   const [offset, setOffset] = useState(1)
@@ -11,12 +12,22 @@ function App() {
   const [perPage] = useState(6)
   const [pageCount, setPageCount] = useState(0)
   const [search, setSearch] = useState('')
+  const [price, setPrice] = useState('lowest')
 
   const getData = async () => {
     const data = await productService.getAll()
-    const filteredData = data.filter(({ name }) => {
+
+    const sortedDataByPrice = data.sort((a, b) => {
+      if (price === 'lowest') {
+        return a.price - b.price
+      }
+      return b.price - a.price
+    })
+
+    const filteredData = sortedDataByPrice.filter(({ name }) => {
       return name.toLowerCase().includes(search.toLowerCase())
     })
+
     const indexOfLast = offset * perPage
     const indexOfFirst = indexOfLast - perPage
     // console.log(indexOfFirst, indexOfLast)
@@ -29,7 +40,7 @@ function App() {
   useEffect(() => {
     getData()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [offset, search])
+  }, [offset, search, price])
 
   const handlePageClick = (e) => {
     const selectedPage = e.selected
@@ -41,8 +52,15 @@ function App() {
     setSearch(input)
   }
 
+  const handlePriceSelect = (e) => {
+    const selected = e.target.value
+    console.log(selected)
+    setPrice(selected)
+  }
+
   return (
     <div className="App">
+      <DropdownPrice handlePriceSelect={handlePriceSelect} />
       <Search handleSearch={handleSearch} />
       <Products products={products} />
       <ReactPaginate
