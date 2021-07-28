@@ -5,141 +5,141 @@
       "name": "Gerda",
       "image": "http://dummyimage.com/157x100.png/5fa2dd/ffffff",
       "description": "mesh leading-edge metrics",
-      "category": "bag",
-      "price": 842
+      "category": ["bag"],
+      "price": "842.00"
     }, {
       "id": 2,
       "name": "Kimmy",
       "image": "http://dummyimage.com/187x100.png/cc0000/ffffff",
       "description": "mesh out-of-the-box functionalities",
-      "category": "shoes",
-      "price": 776
+      "category": ["shoes"],
+      "price": "776.20"
     }, {
       "id": 3,
       "name": "Cindee",
       "image": "http://dummyimage.com/205x100.png/ff4444/ffffff",
       "description": "recontextualize revolutionary niches",
-      "category": "shirt",
-      "price": 594
+      "category": ["shirt"],
+      "price": "594.12"
     }, {
       "id": 4,
       "name": "Tim",
       "image": "http://dummyimage.com/106x100.png/5fa2dd/ffffff",
       "description": "iterate synergistic metrics",
-      "category": "shoes",
-      "price": 675
+      "category": ["shoes"],
+      "price": "675.00"
     }, {
       "id": 5,
       "name": "Launce",
       "image": "http://dummyimage.com/142x100.png/dddddd/000000",
       "description": "target scalable web services",
-      "category": "shoes",
-      "price": 823
+      "category": ["shoes"],
+      "price": "823.11"
     }, {
       "id": 6,
       "name": "Ritchie",
       "image": "http://dummyimage.com/141x100.png/dddddd/000000",
       "description": "syndicate 24/7 initiatives",
-      "category": "shirt",
-      "price": 329
+      "category": ["shirt"],
+      "price": "329.50"
     }, {
       "id": 7,
       "name": "Levon",
       "image": "http://dummyimage.com/109x100.png/ff4444/ffffff",
       "description": "brand viral web services",
-      "category": "dress",
-      "price": 996
+      "category": ["dress"],
+      "price": "996.00"
     }, {
       "id": 8,
       "name": "Mayer",
       "image": "http://dummyimage.com/183x100.png/dddddd/000000",
       "description": "integrate synergistic systems",
-      "category": "shirt",
-      "price": 752
+      "category": ["shirt"],
+      "price": "752.99"
     }, {
       "id": 9,
       "name": "Rog",
       "image": "http://dummyimage.com/116x100.png/cc0000/ffffff",
       "description": "monetize value-added infomediaries",
-      "category": "dress",
-      "price": 770
+      "category": ["dress"],
+      "price": "770.00"
     }, {
       "id": 10,
       "name": "Binny",
       "image": "http://dummyimage.com/223x100.png/dddddd/000000",
       "description": "unleash global methodologies",
-      "category": "shoes",
-      "price": 733
+      "category": ["shoes"],
+      "price": "733.00"
     }, {
       "id": 11,
       "name": "Shannah",
       "image": "http://dummyimage.com/215x100.png/dddddd/000000",
       "description": "scale virtual communities",
-      "category": "bag",
-      "price": 565
+      "category": ["bag"],
+      "price": "565.00"
     }, {
       "id": 12,
       "name": "Eunice",
       "image": "http://dummyimage.com/249x100.png/cc0000/ffffff",
       "description": "embrace killer communities",
-      "category": "dress",
-      "price": 782
+      "category": ["dress"],
+      "price": "782.46"
     }, {
       "id": 13,
       "name": "Robinson",
       "image": "http://dummyimage.com/217x100.png/ff4444/ffffff",
       "description": "aggregate interactive users",
-      "category": "dress",
-      "price": 479
+      "category": ["dress"],
+      "price": "479.15"
     }, {
       "id": 14,
       "name": "Tawnya",
       "image": "http://dummyimage.com/127x100.png/5fa2dd/ffffff",
       "description": "seize distributed infomediaries",
-      "category": "bag",
-      "price": 523
+      "category": ["bag"],
+      "price": "523.00"
     }, {
       "id": 15,
       "name": "Alikee",
       "image": "http://dummyimage.com/242x100.png/ff4444/ffffff",
       "description": "aggregate cutting-edge action-items",
-      "category": "dress",
-      "price": 237
+      "category": ["dress"],
+      "price": "237.15"
     }, {
       "id": 16,
       "name": "Heather",
       "image": "http://dummyimage.com/231x100.png/cc0000/ffffff",
       "description": "cultivate cross-platform networks",
-      "category": "dress",
-      "price": 599
+      "category": ["dress"],
+      "price": "599.00"
     }, {
       "id": 17,
       "name": "Ravid",
       "image": "http://dummyimage.com/116x100.png/5fa2dd/ffffff",
       "description": "synergize frictionless web-readiness",
-      "category": "shoes",
-      "price": 417
+      "category": ["shoes"],
+      "price": "417.07"
     }, {
       "id": 18,
       "name": "Nikita",
       "image": "http://dummyimage.com/116x100.png/dddddd/000000",
       "description": "deploy seamless partnerships",
-      "category": "bag",
-      "price": 885
+      "category": ["bag"],
+      "price": "885.00"
     }, {
       "id": 19,
       "name": "Jaquith",
       "image": "http://dummyimage.com/178x100.png/ff4444/ffffff",
       "description": "target synergistic paradigms",
-      "category": "bag",
-      "price": 372
+      "category": ["bag"],
+      "price": "372.00"
     }, {
       "id": 20,
       "name": "Olivero",
       "image": "http://dummyimage.com/187x100.png/dddddd/000000",
       "description": "aggregate e-business supply-chains",
-      "category": "dress",
-      "price": 201
+      "category": ["dress"],
+      "price": "201.00"
     }
   ]
 }

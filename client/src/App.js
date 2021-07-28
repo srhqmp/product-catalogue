@@ -5,6 +5,16 @@ import Products from './components/products/Products'
 import productService from './services/product'
 import Search from './components/Search'
 import DropdownPrice from './components/DropdownPrice'
+import DropdownCategory from './components/DropdownCategory'
+
+const getCategories = (data) => {
+  let uniqueValues = []
+  data.map(
+    ({ category }) =>
+      (uniqueValues = [...new Set(uniqueValues.concat(category))])
+  )
+  return uniqueValues
+}
 
 function App() {
   const [offset, setOffset] = useState(1)
@@ -13,9 +23,12 @@ function App() {
   const [pageCount, setPageCount] = useState(0)
   const [search, setSearch] = useState('')
   const [price, setPrice] = useState('lowest')
+  const [categories, setCategories] = useState([])
+  const [type, setType] = useState('all')
 
   const getData = async () => {
     const data = await productService.getAll()
+    setCategories(getCategories(data))
 
     const sortedDataByPrice = data.sort((a, b) => {
       if (price === 'lowest') {
@@ -24,7 +37,17 @@ function App() {
       return b.price - a.price
     })
 
-    const filteredData = sortedDataByPrice.filter(({ name }) => {
+    const filteredDataByCategory =
+      type === 'all'
+        ? sortedDataByPrice
+        : sortedDataByPrice.filter(({ category }) => {
+            console.log(type)
+            return category.includes(type)
+          })
+
+    console.log('category:', filteredDataByCategory)
+
+    const filteredData = filteredDataByCategory.filter(({ name }) => {
       return name.toLowerCase().includes(search.toLowerCase())
     })
 
@@ -40,7 +63,7 @@ function App() {
   useEffect(() => {
     getData()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [offset, search, price])
+  }, [offset, search, price, type])
 
   const handlePageClick = (e) => {
     const selectedPage = e.selected
@@ -58,8 +81,18 @@ function App() {
     setPrice(selected)
   }
 
+  const handleCategorySelect = (e) => {
+    const selected = e.target.value
+    console.log(selected)
+    setType(selected)
+  }
+
   return (
     <div className="App">
+      <DropdownCategory
+        handleCategorySelect={handleCategorySelect}
+        categories={categories}
+      />
       <DropdownPrice handlePriceSelect={handlePriceSelect} />
       <Search handleSearch={handleSearch} />
       <Products products={products} />
