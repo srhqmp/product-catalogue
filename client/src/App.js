@@ -89,15 +89,23 @@ function App() {
 
   return (
     <div className="App">
-      <div className="banner text-4xl font-bold text-primary">
-        The perfect outfit for summer
+      <div className="banner">
+        <h2 className="text-3xl md:text-4xl font-bold font-banner text-primary">
+          The perfect outfit for summer
+        </h2>
       </div>
-      <DropdownCategory
-        handleCategorySelect={handleCategorySelect}
-        categories={categories}
-      />
-      <DropdownPrice handlePriceSelect={handlePriceSelect} />
       <Search handleSearch={handleSearch} />
+      <div className="flex justify-between">
+        <h3 className="text-2xl">Featured Products</h3>
+        <div className="flex align-middle">
+          <DropdownCategory
+            handleCategorySelect={handleCategorySelect}
+            categories={categories}
+          />
+          <DropdownPrice handlePriceSelect={handlePriceSelect} />
+        </div>
+      </div>
+
       <Products products={products} />
       <ReactPaginate
         previousLabel={'<'}

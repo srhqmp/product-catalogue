@@ -6410,6 +6410,14 @@ video {
   height: 100vh;
 }
 
+.h-card {
+  height: 428px;
+}
+
+.h-img {
+  height: 75%;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -6834,6 +6842,10 @@ video {
 .w-max {
   width: -webkit-max-content;
   width: max-content;
+}
+
+.w-card {
+  width: 379px;
 }
 
 .min-w-0 {
@@ -22643,6 +22655,10 @@ video {
 
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-banner {
+  font-family: Playfair Display;
 }
 
 .text-xs {
@@ -38595,6 +38611,14 @@ video {
     height: 100vh;
   }
 
+  .sm\:h-card {
+    height: 428px;
+  }
+
+  .sm\:h-img {
+    height: 75%;
+  }
+
   .sm\:max-h-0 {
     max-height: 0px;
   }
@@ -39019,6 +39043,10 @@ video {
   .sm\:w-max {
     width: -webkit-max-content;
     width: max-content;
+  }
+
+  .sm\:w-card {
+    width: 379px;
   }
 
   .sm\:min-w-0 {
@@ -54756,6 +54784,10 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .sm\:font-banner {
+    font-family: Playfair Display;
+  }
+
   .sm\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -70342,6 +70374,14 @@ video {
     height: 100vh;
   }
 
+  .md\:h-card {
+    height: 428px;
+  }
+
+  .md\:h-img {
+    height: 75%;
+  }
+
   .md\:max-h-0 {
     max-height: 0px;
   }
@@ -70766,6 +70806,10 @@ video {
   .md\:w-max {
     width: -webkit-max-content;
     width: max-content;
+  }
+
+  .md\:w-card {
+    width: 379px;
   }
 
   .md\:min-w-0 {
@@ -86503,6 +86547,10 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .md\:font-banner {
+    font-family: Playfair Display;
+  }
+
   .md\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -102089,6 +102137,14 @@ video {
     height: 100vh;
   }
 
+  .lg\:h-card {
+    height: 428px;
+  }
+
+  .lg\:h-img {
+    height: 75%;
+  }
+
   .lg\:max-h-0 {
     max-height: 0px;
   }
@@ -102513,6 +102569,10 @@ video {
   .lg\:w-max {
     width: -webkit-max-content;
     width: max-content;
+  }
+
+  .lg\:w-card {
+    width: 379px;
   }
 
   .lg\:min-w-0 {
@@ -118250,6 +118310,10 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .lg\:font-banner {
+    font-family: Playfair Display;
+  }
+
   .lg\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -133836,6 +133900,14 @@ video {
     height: 100vh;
   }
 
+  .xl\:h-card {
+    height: 428px;
+  }
+
+  .xl\:h-img {
+    height: 75%;
+  }
+
   .xl\:max-h-0 {
     max-height: 0px;
   }
@@ -134260,6 +134332,10 @@ video {
   .xl\:w-max {
     width: -webkit-max-content;
     width: max-content;
+  }
+
+  .xl\:w-card {
+    width: 379px;
   }
 
   .xl\:min-w-0 {
@@ -149997,6 +150073,10 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .xl\:font-banner {
+    font-family: Playfair Display;
+  }
+
   .xl\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -165583,6 +165663,14 @@ video {
     height: 100vh;
   }
 
+  .\32xl\:h-card {
+    height: 428px;
+  }
+
+  .\32xl\:h-img {
+    height: 75%;
+  }
+
   .\32xl\:max-h-0 {
     max-height: 0px;
   }
@@ -166007,6 +166095,10 @@ video {
   .\32xl\:w-max {
     width: -webkit-max-content;
     width: max-content;
+  }
+
+  .\32xl\:w-card {
+    width: 379px;
   }
 
   .\32xl\:min-w-0 {
@@ -181742,6 +181834,10 @@ video {
 
   .\32xl\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .\32xl\:font-banner {
+    font-family: Playfair Display;
   }
 
   .\32xl\:text-xs {
