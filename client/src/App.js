@@ -7,6 +7,7 @@ import Search from './components/Search'
 import DropdownPrice from './components/DropdownPrice'
 import DropdownCategory from './components/DropdownCategory'
 import Footer from './components/Footer'
+import Banner from './components/Banner'
 
 const getCategories = (data) => {
   let uniqueValues = []
@@ -90,20 +91,16 @@ function App() {
 
   return (
     <div className="App">
-      <div className="banner">
-        <h2 className="banner-text">
-          The perfect outfit for summer
-        </h2>
-      </div>
+      <Banner />
       <Search handleSearch={handleSearch} />
       <div className="flex justify-between">
-        <h3 className="text-2xl">Featured Products</h3>
+        <h3 className="text-4xl font">Featured Products</h3>
         <div className="flex align-middle">
+          <DropdownPrice handlePriceSelect={handlePriceSelect} />
           <DropdownCategory
             handleCategorySelect={handleCategorySelect}
             categories={categories}
           />
-          <DropdownPrice handlePriceSelect={handlePriceSelect} />
         </div>
       </div>
 

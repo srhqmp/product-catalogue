@@ -28,6 +28,14 @@
   @apply m-1 p-7
 }
 
+.search-input {
+  @apply relative right-0 border-2 border-gray-300 bg-white h-search w-search px-5 pr-16 text-base uppercase focus:outline-none;
+}
+
+.product-search {
+  @apply flex justify-end text-gray-600 focus-within:text-gray-400 my-3;
+}
+
 
 
 
