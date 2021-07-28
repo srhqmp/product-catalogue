@@ -6,6 +6,7 @@ import productService from './services/product'
 import Search from './components/Search'
 import DropdownPrice from './components/DropdownPrice'
 import DropdownCategory from './components/DropdownCategory'
+import Footer from './components/Footer'
 
 const getCategories = (data) => {
   let uniqueValues = []
@@ -121,6 +122,7 @@ function App() {
         activeClassName={'active'}
         className="pagination"
       />
+      <Footer />
     </div>
   )
 }
