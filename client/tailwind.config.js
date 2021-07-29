@@ -48,6 +48,9 @@ module.exports = {
       },
       outline: {
         email: '1px solid #ffffff'
+      },
+      boxShadow: {
+        card: '5px 8px 19px rgba(223, 223, 223, 0.25)'
       }
     },
   },

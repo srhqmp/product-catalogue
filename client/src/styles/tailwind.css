@@ -13,7 +13,7 @@
 }
 
 .card {
-  @apply bg-white rounded-primary overflow-hidden shadow mt-8 w-80 lg:w-card h-card relative;
+  @apply bg-white rounded-primary overflow-hidden shadow-card mt-8 w-80 lg:w-card h-card relative;
 }
 
 .badge {
