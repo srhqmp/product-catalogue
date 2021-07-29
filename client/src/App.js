@@ -3,7 +3,6 @@ import "./styles/output.css";
 import "./App.css";
 import ReactPaginate from "react-paginate";
 import Products from "./components/products/Products";
-// import productService from "./services/product";
 import Search from "./components/Search";
 import DropdownPrice from "./components/DropdownPrice";
 import DropdownCategory from "./components/DropdownCategory";
@@ -90,7 +89,7 @@ function App() {
       <div className="md:w-9/12 mx-auto">
         <Search handleSearch={handleSearch} />
         <div className="grid grid-cols-1 ml-3 lg:flex lg:justify-between lg:mx-7 mt-8">
-          <h3 className="text-4xl font">Featured Products</h3>
+          <h3 className="text-4xl font mb-4">Featured Products</h3>
           <div className="flex align-middle">
             <DropdownPrice handlePriceSelect={handlePriceSelect} />
             <DropdownCategory
