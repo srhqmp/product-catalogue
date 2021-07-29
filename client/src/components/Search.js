@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 
 const Search = ({ handleSearch }) => {
   return (
-    <div className="product-search mx-auto ml-6 lg:ml-0 lg:mr-2 pt-10">
+    <div className="product-search">
       <input
         className="search-input"
         onChange={handleSearch}
@@ -18,12 +18,12 @@ const Search = ({ handleSearch }) => {
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth={2} 
+          strokeWidth={2}
           d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
         />
       </svg>
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

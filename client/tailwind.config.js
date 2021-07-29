@@ -5,10 +5,6 @@ module.exports = {
     extend: {
       colors: {
         primary: '#E89B51',
-        secondary: {
-          100: 'pink',
-          200: 'salmon',
-        },
         button: {
           100: '#E89B51',
           200: '#D17149'

@@ -174,7 +174,7 @@ const data = {
       id: 20,
       name: "Olivero Dress",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzbPIvecAY4L7g4r-OXJa4vfnnjFzYOTUDMg&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBP4cMPxe6v89ExIOKk0Aol4uFOiHGdPv0dw&usqp=CAU",
       description: "aggregate e-business supply-chains",
       category: ["dress"],
       price: "201.00",
