@@ -2,7 +2,7 @@ import React from 'react'
 
 const Search = ({ handleSearch }) => {
   return (
-    <div className="product-search ml-6 lg:ml-0 lg:mr-2 pt-10">
+    <div className="product-search mx-auto ml-6 lg:ml-0 lg:mr-2 pt-10">
       <input
         className="search-input"
         onChange={handleSearch}

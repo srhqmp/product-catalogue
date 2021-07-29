@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
+import ReactPaginate from "react-paginate";
 import "./styles/output.css";
 import "./App.css";
-import ReactPaginate from "react-paginate";
+
 import Products from "./components/products/Products";
 import Search from "./components/Search";
 import DropdownPrice from "./components/DropdownPrice";
 import DropdownCategory from "./components/DropdownCategory";
-import Footer from "./components/Footer";
 import Banner from "./components/Banner";
+import Footer from "./components/Footer";
+
 import { data } from "./data";
 
 const getCategories = (arr) => {
@@ -17,6 +19,29 @@ const getCategories = (arr) => {
       (uniqueValues = [...new Set(uniqueValues.concat(category))])
   );
   return uniqueValues;
+};
+
+const sortDataByPrice = (data, price) => {
+  return data.sort((a, b) => {
+    if (price === "lowest") {
+      return a.price - b.price;
+    }
+    return b.price - a.price;
+  });
+};
+
+const filterDataByCategory = (data, type) => {
+  return type === "all"
+    ? data
+    : data.filter(({ category }) => {
+        return category.includes(type);
+      });
+};
+
+const filterDataByName = (data, nameToSearch) => {
+  return data.filter(({ name }) => {
+    return name.toLowerCase().includes(nameToSearch.toLowerCase());
+  });
 };
 
 function App() {
@@ -32,35 +57,20 @@ function App() {
   const getData = async () => {
     setCategories(getCategories(data.products));
 
-    const sortedDataByPrice = data.products.sort((a, b) => {
-      if (price === "lowest") {
-        return a.price - b.price;
-      }
-      return b.price - a.price;
-    });
-
-    const filteredDataByCategory =
-      type === "all"
-        ? sortedDataByPrice
-        : sortedDataByPrice.filter(({ category }) => {
-            return category.includes(type);
-          });
-
-
-    const filteredData = filteredDataByCategory.filter(({ name }) => {
-      return name.toLowerCase().includes(search.toLowerCase());
-    });
+    let filteredData = sortDataByPrice(data.products, price);
+    filteredData = filterDataByCategory(filteredData, type);
+    filteredData = filterDataByName(filteredData, search);
 
     const indexOfLast = offset * perPage;
     const indexOfFirst = indexOfLast - perPage;
     const slice = filteredData.slice(indexOfFirst, indexOfLast);
+
     setProducts(slice);
     setPageCount(Math.ceil(filteredData.length / perPage));
   };
 
   useEffect(() => {
     getData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [offset, search, price, type]);
 
   const handlePageClick = (e) => {
