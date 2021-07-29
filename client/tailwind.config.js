@@ -24,7 +24,8 @@ module.exports = {
         footer: '1236px',
         search: '381px',
         searchIcon: '21px',
-        dropdown: '126px'
+        dropdown: '126px',
+        box: '447px'
       },
       height: {
         card: '428px',
@@ -35,14 +36,15 @@ module.exports = {
         search: '41px',
         searchIcon: '21px',
         dropdown: '41px',
-        banner: '414px'
+        banner: '414px',
+        box: '84px'
       },
       borderRadius: {
         primary: '5px'
       },
       backgroundImage: {
-        banner: 'url("https://images.unsplash.com/photo-1546877625-cb8c71916608?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")',
-        footer: 'url("https://images.unsplash.com/photo-1461468611824-46457c0e11fd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")'
+        banner: 'url("../images/banner.png")',
+        footer: 'linear-gradient( rgba(128, 128, 128, 0.7), rgba(128, 128, 128, 0.7) ), url("../images/footer.png")'
       },
       outline: {
         email: '1px solid #ffffff'

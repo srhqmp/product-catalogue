@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProductList = ({ item }) => {
   return (
-    <div className="card">
+    <div className="card md:w-10/12">
       <img
         className="product-image"
         src={item.image}
