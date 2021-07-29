@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 import "./styles/output.css";
-import "./App.css";
+import "./styles/App.css";
 import Products from "./components/products/Products";
 import Search from "./components/Search";
 import DropdownPrice from "./components/DropdownPrice";
