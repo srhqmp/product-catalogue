@@ -3,16 +3,17 @@ import "./styles/output.css";
 import "./App.css";
 import ReactPaginate from "react-paginate";
 import Products from "./components/products/Products";
-import productService from "./services/product";
+// import productService from "./services/product";
 import Search from "./components/Search";
 import DropdownPrice from "./components/DropdownPrice";
 import DropdownCategory from "./components/DropdownCategory";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
+import { data } from "./data";
 
-const getCategories = (data) => {
+const getCategories = (arr) => {
   let uniqueValues = [];
-  data.map(
+  arr.map(
     ({ category }) =>
       (uniqueValues = [...new Set(uniqueValues.concat(category))])
   );
@@ -30,10 +31,9 @@ function App() {
   const [type, setType] = useState("all");
 
   const getData = async () => {
-    const data = await productService.getAll();
-    setCategories(getCategories(data));
+    setCategories(getCategories(data.products));
 
-    const sortedDataByPrice = data.sort((a, b) => {
+    const sortedDataByPrice = data.products.sort((a, b) => {
       if (price === "lowest") {
         return a.price - b.price;
       }
@@ -44,11 +44,9 @@ function App() {
       type === "all"
         ? sortedDataByPrice
         : sortedDataByPrice.filter(({ category }) => {
-            console.log(type);
             return category.includes(type);
           });
 
-    console.log("category:", filteredDataByCategory);
 
     const filteredData = filteredDataByCategory.filter(({ name }) => {
       return name.toLowerCase().includes(search.toLowerCase());
@@ -56,9 +54,7 @@ function App() {
 
     const indexOfLast = offset * perPage;
     const indexOfFirst = indexOfLast - perPage;
-    // console.log(indexOfFirst, indexOfLast)
     const slice = filteredData.slice(indexOfFirst, indexOfLast);
-    console.log(slice);
     setProducts(slice);
     setPageCount(Math.ceil(filteredData.length / perPage));
   };
@@ -80,13 +76,11 @@ function App() {
 
   const handlePriceSelect = (e) => {
     const selected = e.target.value;
-    console.log(selected);
     setPrice(selected);
   };
 
   const handleCategorySelect = (e) => {
     const selected = e.target.value;
-    console.log(selected);
     setType(selected);
   };
 
