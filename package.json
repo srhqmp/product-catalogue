@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/srhqmp/product-catalogue#readme",
   "dependencies": {
+    "json-server": "^0.16.3",
     "nodemon": "^2.0.12"
   }
 }
