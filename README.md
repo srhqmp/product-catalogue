@@ -27,13 +27,6 @@
   - [PostCSS]() - Tool for transforming CSS with JavaScript plugins. 
   - [React Paginate]() - A React component for pagination.
 
-### Backend
-- [Node](https://nodejs.org/en/) - JavaScript runtime for server-side development.
-- [Express](https://expressjs.com/) - Fast, minimalistic web framework for Node.js.
-- [MongoDB](https://www.mongodb.com/) - NoSQL database for storing blog data.
-- [Mongoose](https://mongoosejs.com/) - ODM library for MongoDB.
-- [JWT](https://jwt.io/) -  Secure token-based authentication.
-
 ## Getting Started
 ### Prerequisites
 To run this project locally, you’ll need:
